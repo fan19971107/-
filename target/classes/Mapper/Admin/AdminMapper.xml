@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fancx.Admin.Mapper.AdminMapper">
+    <insert id="insertAdmin">
+        insert into ums_admin(username, password, nick_name)
+        values (#{username}, #{password}, #{nickname})
+    </insert>
+    <select id="selectIdByUsername" resultType="java.lang.Integer">
+        select id
+        from ums_admin
+        where username = #{username}
+    </select>
+    <select id="selectIdByLoginInfo" resultType="java.lang.Integer">
+        select id
+        from ums_admin
+        where username = #{username}
+          and password = #{password}
+    </select>
+    <select id="selectAdminByUsername" resultType="com.fancx.Admin.Entity.AdminEntity">
+        select *
+        from ums_admin
+        where username = #{username}
+    </select>
+</mapper>

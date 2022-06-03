@@ -1,0 +1,67 @@
+{
+  "groups": [
+    {
+      "name": "fancx.ssh",
+      "type": "com.fancx.Common.Util.SSHConnector",
+      "sourceType": "com.fancx.Common.Util.SSHConnector"
+    }
+  ],
+  "properties": [
+    {
+      "name": "fancx.ssh.host",
+      "type": "java.lang.String",
+      "sourceType": "com.fancx.Common.Util.SSHConnector"
+    },
+    {
+      "name": "fancx.ssh.local-port-mysql",
+      "type": "java.lang.Integer",
+      "sourceType": "com.fancx.Common.Util.SSHConnector",
+      "defaultValue": 0
+    },
+    {
+      "name": "fancx.ssh.local-port-redis",
+      "type": "java.lang.Integer",
+      "sourceType": "com.fancx.Common.Util.SSHConnector",
+      "defaultValue": 0
+    },
+    {
+      "name": "fancx.ssh.password",
+      "type": "java.lang.String",
+      "sourceType": "com.fancx.Common.Util.SSHConnector"
+    },
+    {
+      "name": "fancx.ssh.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.fancx.Common.Util.SSHConnector",
+      "defaultValue": 0
+    },
+    {
+      "name": "fancx.ssh.remote-host",
+      "type": "java.lang.String",
+      "sourceType": "com.fancx.Common.Util.SSHConnector"
+    },
+    {
+      "name": "fancx.ssh.remote-port-mysql",
+      "type": "java.lang.Integer",
+      "sourceType": "com.fancx.Common.Util.SSHConnector",
+      "defaultValue": 0
+    },
+    {
+      "name": "fancx.ssh.remote-port-redis",
+      "type": "java.lang.Integer",
+      "sourceType": "com.fancx.Common.Util.SSHConnector",
+      "defaultValue": 0
+    },
+    {
+      "name": "fancx.ssh.session",
+      "type": "com.jcraft.jsch.Session",
+      "sourceType": "com.fancx.Common.Util.SSHConnector"
+    },
+    {
+      "name": "fancx.ssh.user",
+      "type": "java.lang.String",
+      "sourceType": "com.fancx.Common.Util.SSHConnector"
+    }
+  ],
+  "hints": []
+}
