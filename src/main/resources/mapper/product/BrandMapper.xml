@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fancx.products.mapper.BrandMapper">
+    <insert id="addBrand">
+        INSERT INTO pms_brand(brandName, avatarUUID, brandInitials, `order`)
+        VALUES (#{brandName}, #{avatarUUID}, #{brandInitials}, #{order})
+    </insert>
+    <update id="edit">
+        UPDATE pms_brand
+        SET brandName    =#{brandName},
+            brandInitials=#{brandInitials},
+            `order`= #{order}
+        where id = #{id}
+    </update>
+    <delete id="delete">
+delete  from pms_brand
+where id=#{id}
+
+    </delete>
+    <select id="getPageCount" resultType="java.lang.Integer">
+        SELECT COUNT(id)
+        FROM pms_brand
+    </select>
+    <select id="getBrand" resultType="com.fancx.products.entity.BrandEntity">
+        SELECT *
+        FROM pms_brand LIMIT #{start},#{pageSize}
+    </select>
+</mapper>
